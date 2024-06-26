@@ -1,0 +1,8 @@
+version: "3.1"
+
+nlu:
+
+- intent: user_query
+  examples: |
+    - Summarize the Enterprise Agreement for me.
+    - Tell me something about salary and payment according to the Enterprise Agreement.
