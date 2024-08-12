@@ -50,9 +50,9 @@ class ActionDifyIntegration(Action):
         # Replace with your Dify API endpoint and API key
         
         # TODO: SWITCH TO THE NEW USER-SPECIFIC DIFY WORKFLOW
-        url = "http://54.252.174.89:3002/v1/chat-messages"
+        url = "https://dev-soma.securezebra.com/v1/chat-messages"
         headers = {
-            "Authorization": "Bearer app-4KOOBmiVHUNyxSXfPLRFE2uH",
+            "Authorization": "Bearer app-fmkFJlUo2V4BuV3R9vym9NP6",
             "Content-Type": "application/json"
         }
         data = {
@@ -65,7 +65,7 @@ class ActionDifyIntegration(Action):
 		}
         response = requests.post(url, headers=headers, json=data)
         if response.status_code == 200:
-            return response.json().get('answer', 'Sorry, I didn’t get that.')
+            return response.json().get('answer', 'Sorry, I did not get that.')
         else:
             return "Error connecting to Dify"
 
